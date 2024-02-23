@@ -168,7 +168,7 @@ function NavBar({ children }) {
 function Logo() {
   return <div className="logo">
     <span role="img">🎬</span>
-    <h1>moviesToWatchrn</h1>
+    <h1>moviesToWatch</h1>
   </div>
 }
 

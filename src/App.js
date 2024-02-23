@@ -96,7 +96,7 @@ const average = (arr) =>
         try{
           setError("");
           setIsLoad(true);
-        const res = await fetch(`http://www.omdbapi.com/?apikey=${key}&s=${query}`,{signal:controller.signal});
+        const res = await fetch(`https://www.omdbapi.com/?apikey=${key}&s=${query}`,{signal:controller.signal});
         
         if(!res.ok) throw new Error("something went wrong");
         
@@ -294,7 +294,7 @@ const preRate = watched.find((movie)=>movie.imdbID===selectedMovie)?.userRating;
 
     async function movieFetch(){
       setIsLoad(true);
-      const res = await fetch(`http://www.omdbapi.com/?apikey=${key}&i=${selectedMovie}`);    
+      const res = await fetch(`https://www.omdbapi.com/?apikey=${key}&i=${selectedMovie}`);    
       const data = await res.json();
       setIsLoad(false);
       setMovie(data);
